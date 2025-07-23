@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nombre": "Jostin Coello",
+    "usuarioId": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Lumian Sancan",
+    "usuarioId": 2
+      },
+  {
+    "id": 3,
+    "nombre": "Daniela Velez",
+    "usuarioId": 3
+  }
+]

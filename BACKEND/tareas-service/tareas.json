@@ -1,0 +1,20 @@
+[
+  {
+    "id": 3,
+    "titulo": "Estudiar para el examen",
+    "descripcion": "Repasar microservicios y Express",
+    "usuarioId": 2
+  },
+  {
+    "id": 2,
+    "titulo": "Corregir codigo rar",
+    "descripcion": "Comentar en cada linea importante",
+    "usuarioId": 1
+  },
+  {
+    "id": 1,
+    "titulo": "Pasar lista",
+    "descripcion": "Comenzar por el ultimo",
+    "usuarioId": 3
+  }
+]
