@@ -1,4 +1,4 @@
-# Microservicio-Web---Gesti-n-de-Tareas
+# Microservicio_Gestion_Tareas
                                         ---Introducción---
 A continuación se podrá mostrar la documentación necesaria para el desarrollo e implementación de un Microservicio Web que nos ayudará a guardar la gestión de tareas, ya sea diarias del hogar o de un negocio, es un programa sencillo, desarrollado mediante Visual Studio Code. Ambos servicios fueron construidos empleando Node.js junto con el framework Express. Además, se implementó una interfaz web en Angular, la cual se encarga de consumir dichos servicios mediante el uso de HttpClient, permitiendo la interacción dinámica entre el cliente y el servidor.
 
