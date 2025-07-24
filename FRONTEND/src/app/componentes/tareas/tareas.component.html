@@ -1,0 +1,51 @@
+<div class="container">
+<div class="card">
+  <h2>Gestión de Tareas</h2>
+
+  <!-- Formulario para añadir tarea -->
+  <form (ngSubmit)="agregarTarea()">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" [(ngModel)]="nuevaTarea.titulo" name="titulo" required>
+
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" [(ngModel)]="nuevaTarea.descripcion" name="descripcion" required>
+
+    <label for="usuario">Asignar a:</label>
+    <select [(ngModel)]="nuevaTarea.usuarioId" name="usuarioId" required>
+      <option [ngValue]="undefined" disabled selected>Seleccione un usuario</option>
+      <option *ngFor="let usuario of usuarios" [ngValue]="usuario.id">{{ usuario.nombre }}</option>
+    </select>
+
+
+
+    <button type="submit">Agregar Tarea</button>
+  </form>
+
+  <hr>
+
+  <!-- Lista de tareas -->
+ 
+<h3>Tareas registradas</h3>
+<ul>
+  <li *ngFor="let tarea of tareas">
+    <div *ngIf="tareaEditando?.id !== tarea.id">
+      <strong>{{ tarea.titulo }}</strong>: {{ tarea.descripcion }} <br>
+      <em>Asignado a: {{ tarea.usuarioNombre }}</em>
+      <button (click)="iniciarEdicion(tarea)">Editar</button>
+      <button (click)="eliminarTarea(tarea.id!)">Eliminar</button>
+    </div>
+
+    <div *ngIf="tareaEditando">
+      <input [(ngModel)]="tareaEditando.titulo" placeholder="Nuevo título">
+      <input [(ngModel)]="tareaEditando.descripcion" placeholder="Nueva descripción">
+      <select [(ngModel)]="tareaEditando.usuarioId" name="usuarioIdEdit" required>
+      <option *ngFor="let usuario of usuarios" [value]="usuario.id">{{ usuario.nombre }}</option>
+      </select>
+      
+      <button (click)="guardarEdicion()">Guardar</button>
+      <button (click)="cancelarEdicion()">Cancelar</button>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
