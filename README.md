@@ -32,15 +32,19 @@ Aplicación web basada en microservicios con Angular + Node.js
 ##  Instrucciones
 
 ### 1. Clonar el repositorio
+
 git clone https://github.com/tu-usuario/microservicios-online.git
 cd microservicios-online
 
 ### 2. Abre terminal en cada microservicio y ejecuta:
+
 npm install
 node index.js
+
 Ambos servicios escuchan por defecto en distintos puertos (ej. http://localhost:3000 y http://localhost:3001).
 
 ### 3. En el frontend:
+
 npm install
 ng serve
 
